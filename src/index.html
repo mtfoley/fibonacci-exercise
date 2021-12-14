@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Fibonacci Exercise</title>
+        <link rel="stylesheet" href="./app.css"></head>
+    </head>
+    <body>
+        <h1>Fibonacci Exercise</h1>
+        <h2>Filtering Options</h2>
+        <form>
+            <label for="filter-even" class="filter-checkbox-label">
+                <input type="checkbox" name="filter-even" id="filter-even" />
+                Only even numbers
+            </label>
+            <label for="filter-prime" class="filter-checkbox-label">
+                <input type="checkbox" name="filter-prime" id="filter-prime" />
+                Only prime numbers
+            </label>
+            <label for="filter-odd-digit" class="filter-checkbox-label">
+                <input type="checkbox" name="filter-odd-digit" id="filter-odd-digit" />
+                Only numbers with at least one odd digit
+            </label>
+        </form>
+        <h2>Results</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Index</th><th>Value</th>
+                </tr>    
+            </thead>
+            <tbody id="results">
+            </tbody>
+        </table>
+        <script type="module" src="./app.mjs"></script>
+    </body>
+</html>
