@@ -67,4 +67,45 @@ function filterValues(values,filters){
     });
     return result;
 }
-export {filterValues,generateFibonacci,isPrime,isEven,hasOddDigit,MAX_SAFE_INT}
+function getResultsHTML(results){
+    if(results.length == 0) return "<tr><td colspan=\"2\">No Results</td></tr>";
+    let html = "";
+    results.forEach(({value},i) => {
+        html += "<tr><td>"+(i+1)+"<td><td>"+value+"</td></tr>";
+    });
+    return html;
+}
+function setupPage(){
+    let evenCheck = document.getElementById('filter-even');
+    let primeCheck = document.getElementById('filter-prime');
+    let oddDigitCheck = document.getElementById('filter-odd-digit');
+    let resultContainer = document.getElementById('results');
+    const getFilters = function(){
+        let filterStrings = [];
+        if(evenCheck.checked) filterStrings.push('even');
+        if(primeCheck.checked) filterStrings.push('prime');
+        if(oddDigitCheck.checked) filterStrings.push('oddDigit');
+        return filterStrings;
+    };
+    const populate = function(){
+        const filters = getFilters();
+        const results = filterValues(fibonacci,filters);
+
+        resultContainer.innerHTML = getResultsHTML(results);
+    };
+    evenCheck.addEventListener('change', (event) => {
+        populate();
+    });
+    primeCheck.addEventListener('change', (event) => {
+        populate();
+    });
+    oddDigitCheck.addEventListener('change', (event) => {
+        populate();
+    });
+    populate();
+}
+export {filterValues,generateFibonacci,isPrime,isEven,hasOddDigit,MAX_SAFE_INT};
+const fibonacci = generateFibonacci();
+if(window){
+    window.onload = setupPage();
+}
