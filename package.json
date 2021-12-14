@@ -1,0 +1,26 @@
+{
+  "name": "fibonacci-exercise",
+  "version": "1.0.0",
+  "description": "Exercise with Fibonacci Sequence",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/**/*.test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtfoley/fibonacci-exercise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mtfoley/fibonacci-exercise/issues"
+  },
+  "homepage": "https://github.com/mtfoley/fibonacci-exercise#readme",
+  "devDependencies": {
+    "mocha": "^9.1.3"
+  }
+}
