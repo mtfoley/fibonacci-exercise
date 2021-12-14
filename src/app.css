@@ -1,0 +1,18 @@
+body {
+    color: #333;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+h1,h2 {
+    color: #244;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid #244;
+    table-layout: fixed;
+}
+td, th {
+    text-align: center;
+}
+label.filter-checkbox-label {
+    display: block;
+}
