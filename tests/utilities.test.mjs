@@ -1,5 +1,5 @@
 import assert from "assert";
-import {filterValues,generateFibonacci,isPrime,isEven,hasOddDigit,MAX_SAFE_INT} from "../src/app.mjs";
+import {filterValues,generateFibonacci,isPrime,isEven,hasOddDigit,MAX_SAFE_INT} from "../src/utilities.mjs";
 it('isEven returns true for 2* any 10 random integers',() => {
     for(let i=0;i<10;i++){
         const value = Math.round(Math.random()*0.5*MAX_SAFE_INT);
