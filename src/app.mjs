@@ -80,6 +80,7 @@ function setupPage(){
     let primeCheck = document.getElementById('filter-prime');
     let oddDigitCheck = document.getElementById('filter-odd-digit');
     let resultContainer = document.getElementById('results');
+    let resultInfo = document.getElementById('results-info');
     const getFilters = function(){
         let filterStrings = [];
         if(evenCheck.checked) filterStrings.push('even');
@@ -89,6 +90,7 @@ function setupPage(){
     };
     const populate = function(){
         const results = filterValues(fibonacci,getFilters());
+        resultInfo.innerHTML = `Maximum supported value is ${MAX_SAFE_INT}. Number of results = ${results.length}`;
         resultContainer.innerHTML = getResultsHTML(results);
     };
     evenCheck.addEventListener('change', populate);
