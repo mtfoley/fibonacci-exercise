@@ -88,20 +88,12 @@ function setupPage(){
         return filterStrings;
     };
     const populate = function(){
-        const filters = getFilters();
-        const results = filterValues(fibonacci,filters);
-
+        const results = filterValues(fibonacci,getFilters());
         resultContainer.innerHTML = getResultsHTML(results);
     };
-    evenCheck.addEventListener('change', (event) => {
-        populate();
-    });
-    primeCheck.addEventListener('change', (event) => {
-        populate();
-    });
-    oddDigitCheck.addEventListener('change', (event) => {
-        populate();
-    });
+    evenCheck.addEventListener('change', populate);
+    primeCheck.addEventListener('change', populate);
+    oddDigitCheck.addEventListener('change', populate);
     populate();
 }
 export {filterValues,generateFibonacci,isPrime,isEven,hasOddDigit,MAX_SAFE_INT};
