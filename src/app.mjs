@@ -69,9 +69,9 @@ function filterValues(values,filters){
 }
 function getResultsHTML(results){
     if(results.length == 0) return "<tr><td colspan=\"2\">No Results</td></tr>";
-    let html = "";
+    let html = "<tr><th>Index</th><th>Value</th></tr>";
     results.forEach(({value},i) => {
-        html += "<tr><td>"+(i+1)+"<td><td>"+value+"</td></tr>";
+        html += `<tr><td>${i+1}</td><td>${value}</td></tr>`;
     });
     return html;
 }
