@@ -71,7 +71,7 @@ function getResultsHTML(results){
     if(results.length == 0) return "<tr><td colspan=\"2\">No Results</td></tr>";
     let html = "<tr><th>Index</th><th>Value</th></tr>";
     results.forEach(({value},i) => {
-        html += `<tr><td>${i+1}</td><td>${value}</td></tr>`;
+        html += `<tr><td>${i+1}</td><td>${value.toLocaleString()}</td></tr>`;
     });
     return html;
 }
@@ -90,7 +90,7 @@ function setupPage(){
     };
     const populate = function(){
         const results = filterValues(fibonacci,getFilters());
-        resultInfo.innerHTML = `Maximum supported value is ${MAX_SAFE_INT}. Number of results = ${results.length}`;
+        resultInfo.innerHTML = `Maximum supported value is ${MAX_SAFE_INT.toLocaleString()}. Number of results = ${results.length}`;
         resultContainer.innerHTML = getResultsHTML(results);
     };
     evenCheck.addEventListener('change', populate);
