@@ -1,18 +1,69 @@
 body {
     color: #333;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "avenir-light",Arial,Helvetica,sans-serif;
+    width: 80%;
+    margin: auto;
 }
-h1,h2 {
-    color: #244;
+header {
+    border-radius: 8px;
+    background-color: transparent;
+    background-image: url('./images/nautilus.jpg');
+    background-position-y: 30%;
+    background-position-x: 20%;
+    background-size: cover;
+}
+section {
+    border-radius: 8px;
+    background-color: rgb(219, 219, 255);
+    padding: 1em;
+    margin: 1em 0;
+    box-shadow: 2px 2px 2px 1px rgba(4, 48, 75, .7);
+}
+header h1 {
+    border-radius: 8px;
+    background: rgba(30,30,30,0.7);
+    color: rgb(230,230,230);
+    text-align: center;
+    font-size: 48pt;
+    padding: 1em;
+    margin:0;
+}
+h2 {
+    color: rgb(4, 48, 75);
+    border-bottom:1px solid rgb(4, 48, 75, 0.5);
 }
 table {
     border-collapse: collapse;
     border: 1px solid #244;
     table-layout: fixed;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+tr:nth-child(even){
+    background-color: rgb(200,200,200);
+}
+tr:hover {
+    background-color: rgba(30,30,30);
+    color:rgb(219, 219, 255)
 }
 td, th {
     text-align: center;
+    padding: 0.5em;
 }
 label.filter-checkbox-label {
     display: block;
 }
+a {
+    color: rgb(4, 48, 75);
+}
+a:hover {
+    color: #024F87;
+}
+footer {
+    text-align: center;
+}
+
+/* icon fill: #024F87
+hover opacity 0.5
+*/

@@ -4,27 +4,39 @@
         <link rel="stylesheet" href="./app.css"></head>
     </head>
     <body>
-        <h1>Fibonacci Exercise</h1>
-        <p>Source code for this code exercise can be found at <a href="https://github.com/mtfoley/fibonacci-exercise" rel="noreferrer" target="_blank">https://github.com/mtfoley/fibonacci-exercise</a>.</p>
-        <p>My name is Matthew Foley, and I can be found on <a href="https://github.com/mtfoley" rel="noreferrer" target="_blank">GitHub</a>, <a href="https://twitter.com/MatthewTFoley" rel="noreferrer" target="_blank">Twitter</a>, and <a href="https://dev.to/mtfoley" rel="noreferrer" target="_blank">DEV</a>.</p>
-        <h2>Filtering Options</h2>
-        <form>
-            <label for="filter-even" class="filter-checkbox-label">
-                <input type="checkbox" name="filter-even" id="filter-even" />
-                Only even numbers
-            </label>
-            <label for="filter-prime" class="filter-checkbox-label">
-                <input type="checkbox" name="filter-prime" id="filter-prime" />
-                Only prime numbers
-            </label>
-            <label for="filter-odd-digit" class="filter-checkbox-label">
-                <input type="checkbox" name="filter-odd-digit" id="filter-odd-digit" />
-                Only numbers with at least one odd digit
-            </label>
-        </form>
-        <h2>Results</h2>
-        <p id="results-info"></p>
-        <table id="results"></table>
+        <header role="img" alt="nautilus seashell background image">
+            <h1>Fibonacci Exercise</h1>
+        </header>
+        <section class="info">
+            <p>Source code for this code exercise can be found at <a href="https://github.com/mtfoley/fibonacci-exercise" rel="noreferrer" target="_blank">https://github.com/mtfoley/fibonacci-exercise</a>.</p>
+            <p>My name is Matthew Foley, and I can be found on <a href="https://github.com/mtfoley" rel="noreferrer" target="_blank">GitHub</a>, <a href="https://twitter.com/MatthewTFoley" rel="noreferrer" target="_blank">Twitter</a>, and <a href="https://dev.to/mtfoley" rel="noreferrer" target="_blank">DEV</a>.</p>    
+        </section>
+        <section class="filter">
+            <h2>Filtering Options</h2>
+            <form>
+                <label for="filter-even" class="filter-checkbox-label">
+                    <input type="checkbox" name="filter-even" id="filter-even" />
+                    Only even numbers
+                </label>
+                <label for="filter-prime" class="filter-checkbox-label">
+                    <input type="checkbox" name="filter-prime" id="filter-prime" />
+                    Only prime numbers
+                </label>
+                <label for="filter-odd-digit" class="filter-checkbox-label">
+                    <input type="checkbox" name="filter-odd-digit" id="filter-odd-digit" />
+                    Only numbers with at least one odd digit
+                </label>
+            </form>    
+        </section>
+        <section class="results">
+            <h2>Results</h2>
+            <p id="results-info"></p>
+            <table id="results"></table>    
+        </section>
+        <footer>
+            &copy; Matthew Foley, 2021<br/>
+            <small>Header Background Image by <a href="https://unsplash.com/@kb_photoart?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kevin Bergen</a> on <a href="https://unsplash.com/s/photos/nautilus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></small>
+        </footer>
         <script type="module" src="./app.mjs"></script>
     </body>
 </html>
