@@ -7,7 +7,9 @@ function getResultsHTML(results) {
   // Iterate to add table row for each result
   let html = "";
   results.forEach(({ value }, i) => {
-    html += `<tr><th scope="row">${i + 1}</th><td>${value.toLocaleString()}</td></tr>`;
+    html += `<tr><th scope="row">${
+      i + 1
+    }</th><td>${value.toLocaleString()}</td></tr>`;
   });
   html = `<caption>Fibonacci Sequence</caption>
     <tbody>
