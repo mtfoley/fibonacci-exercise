@@ -4,11 +4,14 @@ function getResultsHTML(results) {
   // If no results, return table cell indicating no results
   if (results.length == 0) return '<tr><td colspan="2">No Results</td></tr>';
   // Start with header row
-  let html = "<tr><th>Index</th><th>Value</th></tr>";
   // Iterate to add table row for each result
+  let html = "";
   results.forEach(({ value }, i) => {
-    html += `<tr><td>${i + 1}</td><td>${value.toLocaleString()}</td></tr>`;
+    html += `<tr><th scope="row">${i + 1}</th><td>${value.toLocaleString()}</td></tr>`;
   });
+  html = `<caption>Fibonacci Sequence</caption>
+    <tbody>
+    <tr><th scope=\"col\">Index</th><th scope=\"col\">Value</th></tr>${html}</tbody>`;
   return html;
 }
 
